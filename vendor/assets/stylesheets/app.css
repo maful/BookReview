@@ -1,6 +1,14 @@
 /*
   * Custom CSS
  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+div.container {
+  font-family: 'Open Sans', sans-serif;
+}
 nav#navbar-header {
   border-radius: 0;
+}
+.valign-top {
+  vertical-align: top;
 }

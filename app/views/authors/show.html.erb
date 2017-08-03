@@ -1,0 +1,13 @@
+<h2>Detail Author</h2>
+<%= link_to "Back", authors_path, class: 'btn btn-sm btn-success' %>
+<hr>
+<table width="100%">
+  <tr>
+    <th width="10%">Name</th>
+    <td> : <%= @author.name %></td>
+  </tr>
+  <tr>
+    <th class="valign-top">Biography</th>
+    <td> : <%= @author.biography %></td>
+  </tr>
+</table>
