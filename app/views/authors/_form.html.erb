@@ -1,19 +1,31 @@
+<% if @author.errors.any? %>
+  <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</strong>
+    <ul>
+      <% @author.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @author, html: { class: "form-horizontal" } do |f| %>
   <div class="form-group">
-    <%= f.label(:name, class: "col-lg-2 control-label") %>
+    <%= f.label(:name, class: "col-lg-1 control-label") %>
     <div class="col-lg-10">
       <%= f.text_field :name, class: 'form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label(:biography, class: "col-lg-2 control-label") %>
+    <%= f.label(:biography, class: "col-lg-1 control-label") %>
     <div class="col-lg-10">
       <%= text_area(:author, :biography, rows: 3, class: 'form-control') %>
     </div>
   </div>
   <div class="form-group">
-    <div class="col-lg-10 col-lg-offset-2">
-      <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <div class="col-lg-10 col-lg-offset-1">
+      <%= f.submit class: 'btn btn-primary' %>
       <%= f.button 'Cancel', type: 'reset', class: 'btn btn-default' %>
     </div>
   </div>

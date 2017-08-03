@@ -1,4 +1,10 @@
-<h2>Add Author</h2>
-<%= link_to "Back", authors_path, class: 'btn btn-sm btn-success' %>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <h2>Add Author</h2>
+    <%= link_to authors_path, class: 'btn btn-sm btn-success' do %>
+      <%= fa_icon "arrow-left" %> Back
+    <% end %>
+  </div>
+</div>
 <hr>
 <%= render 'form' %>
