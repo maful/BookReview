@@ -34,6 +34,8 @@ gem 'devise', '~> 4.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'font-awesome-rails'
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

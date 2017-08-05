@@ -33,6 +33,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Books", books_path %></li>
             <li><%= link_to "Authors", authors_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -43,22 +44,14 @@
     </nav>
     <div class="container">
       <% if notice %>
-        <div class="container">
-          <div class="row">
-            <div class="alert alert-success alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <%= notice %>
-            </div>
-          </div>
+        <div class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= notice %>
         </div>
       <% elsif alert %>
-        <div class="container">
-          <div class="row">
-            <div class="alert alert-warning alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <%= alert %>
-            </div>
-          </div>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= alert %>
         </div>
       <% end %>
 

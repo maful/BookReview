@@ -1,0 +1,33 @@
+<h2>Detail Book</h2>
+<%= link_to books_path, class: 'btn btn-sm btn-success' do %>
+  <%= fa_icon "arrow-left" %> Back
+<% end %>
+<hr>
+<table width="100%">
+  <tr>
+    <th width="10%">Title</th>
+    <td> : <%= @book.title %></td>
+  </tr>
+  <tr>
+    <th>Author</th>
+    <td> : <%= @book.author.name %></td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td> : <%= number_to_currency(@book.price) %></td>
+  </tr>
+  <tr>
+    <th class="valign-top">Description</th>
+    <td> : <%= @book.description %></td>
+  </tr>
+  <tr>
+    <th class="valign-top">Cover</th>
+    <td>
+    <% if @book.cover? %>
+      <%= image_tag @book.cover.thumb.url %>
+    <% else %>
+      nil
+    <% end %>
+    </td>
+  </tr>
+</table>
