@@ -1,2 +1,27 @@
-<h1>Home#index <%= @say %></h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-xs-12">
+    <div class="well well-sm text-center">
+      <h2>Happy to learn and Keep going !!</h2>
+    </div>
+  </div>
+  <% if @books.present? %>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <% @books.each do |book| %>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="panel panel-default grid">
+            <div class="panel-body text-center grid-item">
+              <strong><%= book.title %></strong> <br>
+              <%= image_tag book.cover.thumb.url, class: 'img-responsive img-center' %> <br>
+              by <%= book.author.name %> <br>
+              <%= number_to_currency(book.price) %><br><br>
+              <%= link_to "Show", book_path(1), class: 'btn btn-sm btn-info' %>
+              <%= link_to "Buy", book_path(1), class: 'btn btn-sm btn-warning' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>There are no book</p>
+  <% end %>
+</div>
