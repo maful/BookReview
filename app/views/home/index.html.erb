@@ -5,11 +5,11 @@
     </div>
   </div>
   <% if @books.present? %>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div id="masonry-container" class="col-md-12 transitions-enabled">
       <% @books.each do |book| %>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <div class="panel panel-default grid">
-            <div class="panel-body text-center grid-item">
+        <div class="grid-item">
+          <div class="panel panel-default">
+            <div class="panel-body text-center">
               <strong><%= book.title %></strong> <br>
               <%= image_tag book.cover.thumb.url, class: 'img-responsive img-center' %> <br>
               by <%= book.author.name %> <br>

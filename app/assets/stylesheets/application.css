@@ -13,6 +13,7 @@
  *= require font-awesome
  *= require app.css
  *= require bootstrap.min.css
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */

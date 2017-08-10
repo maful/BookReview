@@ -36,6 +36,7 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'font-awesome-rails'
 gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.8'
+gem 'masonry-rails', '~> 0.2.4'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

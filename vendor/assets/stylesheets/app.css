@@ -19,3 +19,17 @@ img.img-center {
   margin-left: auto;
   margin-right: auto;
 }
+#masonry-container {
+  margin: 0 auto;
+  width: 100%;
+}
+.grid-item {
+  margin-top: 10px;
+  text-align: center;
+  margin: 7px;
+  width: 250px;
+}
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
