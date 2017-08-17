@@ -20,7 +20,7 @@ class Admin::AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     if @author.save
-      redirect_to authors_path, notice: "Author was successfully saved!"
+      redirect_to admin_authors_path, notice: "Author was successfully saved!"
     else
       render 'new'
     end
@@ -31,7 +31,7 @@ class Admin::AuthorsController < ApplicationController
 
   def update
     if @author.update(author_params)
-      redirect_to authors_path, notice: "Author was successfully saved!"
+      redirect_to admin_authors_path, notice: "Author was successfully saved!"
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class Admin::AuthorsController < ApplicationController
 
   def destroy
     @author.destroy
-    redirect_to authors_path, alert: "Author was successfully deleted!"
+    redirect_to admin_authors_path, alert: "Author was successfully deleted!"
   end
 
   private
