@@ -1,4 +1,4 @@
-class BooksController < ApplicationController
+class Admin::BooksController < ApplicationController
   before_action :find_book, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -20,7 +20,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to books_path, notice: "Book was successfully saved!"
+      redirect_to admin_books_path, notice: "Book was successfully saved!"
     else
       render 'new'
     end
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
 
   def update
     if @book.update(book_params)
-      redirect_to books_path, notice: "Book was successfully saved!"
+      redirect_to admin_books_path, notice: "Book was successfully saved!"
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-    redirect_to books_path, alert: "Book was successfully deleted!"
+    redirect_to admin_books_path, alert: "Book was successfully deleted!"
   end
 
   private
