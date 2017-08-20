@@ -1,5 +1,6 @@
 class Admin::AuthorsController < ApplicationController
   before_action :find_author, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @authors = Author.all
