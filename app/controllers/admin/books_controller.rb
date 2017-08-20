@@ -48,6 +48,6 @@ class Admin::BooksController < ApplicationController
     end
 
     def find_book
-      @book = Book.find(params[:id])
+      @book = Book.friendly.find(params[:id])
     end
 end
